@@ -1,0 +1,52 @@
+# Classifier
+classifier:
+  input_dim: 2482
+  hidden_layers: [1024]
+
+# Checkpoints
+checkpoints:
+  resume_dirname:
+  resume_filename:
+  checkpoint_dirname:
+  checkpoint_filename:
+
+# Dataset
+dataset:
+  dataset_type:
+  separateAugmentation: False
+  model_name: "hyperiqa"
+  f_model_name: "hyperiqa"
+
+# Train Loss Function
+train_loss_fn:
+  name:
+
+# Val Loss Function
+val_loss_fn:
+  name:
+
+# Optimizer
+optimizer:
+  name: "AdamW"
+  lr: 0.0001
+  weight_decay: 0.00004
+
+# Scheduler
+scheduler:
+  name: 
+  T_max: 
+
+# Train Settings
+train_settings:
+  train: True
+  batch_size: 64
+  num_workers: 8
+  monitor: "val_loss"
+  mode: "min"
+
+# Trainer
+trainer:
+  accelerator: "cuda"
+  num_nodes: 1
+  devices: [0]
+  max_epochs: 20
